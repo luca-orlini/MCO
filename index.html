@@ -1,135 +1,136 @@
-<!DOCTYPE html><html class="dark" lang="it"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Midnight City Orchestra in concerto</title>
+<!DOCTYPE html>
+
+<html class="dark" lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Using Jost as the geometric alternative for Engravers Gothic, as it offers a wide, clean, minimalist character suitable for web CDNs -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-nav {
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-        .nocturnal-gradient {
-            background: linear-gradient(180deg, rgba(10,10,15,0) 0%, rgba(10,10,15,1) 100%);
-        }
-        .hero-overlay {
-            background: radial-gradient(circle at center, rgba(10,10,15,0.4) 0%, rgba(10,10,15,0.8) 100%);
-        }
-        .mask-fade {
-            mask-image: linear-gradient(to right, black 0%, black 70%, transparent 100%);
-        }
-    </style>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-tint": "#e4c279",
-                        "surface-bright": "#3c3933",
-                        "surface": "#16130e",
-                        "tertiary": "#b9c6fa",
-                        "on-primary-container": "#533d00",
-                        "secondary-fixed-dim": "#a7c8ff",
-                        "primary-fixed-dim": "#e4c279",
-                        "outline": "#999080",
-                        "surface-container-lowest": "#100e09",
-                        "on-tertiary-fixed": "#091842",
-                        "on-primary-fixed": "#251a00",
-                        "on-tertiary-fixed-variant": "#384570",
-                        "inverse-on-surface": "#33302a",
-                        "inverse-primary": "#745b1c",
-                        "on-surface-variant": "#d0c5b4",
-                        "surface-variant": "#38342e",
-                        "inverse-surface": "#e9e1d9",
-                        "error-container": "#93000a",
-                        "surface-container-highest": "#38342e",
-                        "secondary": "#a7c8ff",
-                        "tertiary-container": "#9eabdd",
-                        "on-error-container": "#ffdad6",
-                        "tertiary-fixed-dim": "#b8c5f8",
-                        "outline-variant": "#4d4639",
-                        "error": "#ffb4ab",
-                        "secondary-container": "#1e477b",
-                        "primary-container": "#c9a962",
-                        "on-tertiary": "#212e58",
-                        "tertiary-fixed": "#dce1ff",
-                        "secondary-fixed": "#d5e3ff",
-                        "surface-dim": "#16130e",
-                        "on-secondary": "#003060",
-                        "on-primary-fixed-variant": "#5a4303",
-                        "surface-container-high": "#2d2a24",
-                        "on-primary": "#3f2e00",
-                        "primary-fixed": "#ffdf9b",
-                        "background": "#16130e",
-                        "surface-container-low": "#1e1b16",
-                        "on-tertiary-container": "#323f6a",
-                        "on-error": "#690005",
-                        "surface-container": "#221f1a",
-                        "on-secondary-fixed-variant": "#1e477b",
-                        "on-background": "#e9e1d9",
-                        "on-secondary-container": "#92b7f1",
-                        "primary": "#e6c47a",
-                        "on-secondary-fixed": "#001c3b",
-                        "on-surface": "#e9e1d9"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-desktop": "64px",
-                        "base": "8px",
-                        "margin-mobile": "20px",
-                        "container-max": "1280px",
-                        "gutter": "24px"
-                    },
-                    "fontFamily": {
-                        "headline-xl": ["Playfair Display"],
-                        "headline-md": ["Playfair Display"],
-                        "label-md": ["DM Sans"],
-                        "body-lg": ["DM Sans"],
-                        "headline-lg-mobile": ["Playfair Display"],
-                        "headline-lg": ["Playfair Display"],
-                        "body-md": ["DM Sans"]
-                    },
-                    "fontSize": {
-                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
-                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "300"}],
-                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        "colors": {
+                            "surface-tint": "#e4c279",
+                            "surface-bright": "#3c3933",
+                            "surface": "#16130e",
+                            "tertiary": "#b9c6fa",
+                            "on-primary-container": "#533d00",
+                            "secondary-fixed-dim": "#a7c8ff",
+                            "primary-fixed-dim": "#e4c279",
+                            "outline": "#999080",
+                            "surface-container-lowest": "#100e09",
+                            "on-tertiary-fixed": "#091842",
+                            "on-primary-fixed": "#251a00",
+                            "on-tertiary-fixed-variant": "#384570",
+                            "inverse-on-surface": "#33302a",
+                            "inverse-primary": "#745b1c",
+                            "on-surface-variant": "#d0c5b4",
+                            "surface-variant": "#38342e",
+                            "inverse-surface": "#e9e1d9",
+                            "error-container": "#93000a",
+                            "surface-container-highest": "#38342e",
+                            "secondary": "#a7c8ff",
+                            "tertiary-container": "#9eabdd",
+                            "on-error-container": "#ffdad6",
+                            "tertiary-fixed-dim": "#b8c5f8",
+                            "outline-variant": "#4d4639",
+                            "error": "#ffb4ab",
+                            "secondary-container": "#1e477b",
+                            "primary-container": "#c9a962",
+                            "on-tertiary": "#212e58",
+                            "tertiary-fixed": "#dce1ff",
+                            "secondary-fixed": "#d5e3ff",
+                            "surface-dim": "#16130e",
+                            "on-secondary": "#003060",
+                            "on-primary-fixed-variant": "#5a4303",
+                            "surface-container-high": "#2d2a24",
+                            "on-primary": "#3f2e00",
+                            "primary-fixed": "#ffdf9b",
+                            "background": "#16130e",
+                            "surface-container-low": "#1e1b16",
+                            "on-tertiary-container": "#323f6a",
+                            "on-error": "#690005",
+                            "surface-container": "#221f1a",
+                            "on-secondary-fixed-variant": "#1e477b",
+                            "on-background": "#e9e1d9",
+                            "on-secondary-container": "#92b7f1",
+                            "primary": "#e6c47a",
+                            "on-secondary-fixed": "#001c3b",
+                            "on-surface": "#e9e1d9"
+                        },
+                        "borderRadius": {
+                            "DEFAULT": "1rem",
+                            "lg": "2rem",
+                            "xl": "3rem",
+                            "full": "9999px"
+                        },
+                        "spacing": {
+                            "margin-desktop": "64px",
+                            "base": "8px",
+                            "margin-mobile": "20px",
+                            "container-max": "1280px",
+                            "gutter": "24px"
+                        },
+                        "fontFamily": {
+                            "headline-xl": ["Jost", "sans-serif"],
+                            "headline-md": ["Jost", "sans-serif"],
+                            "label-md": ["Jost", "sans-serif"],
+                            "body-lg": ["Jost", "sans-serif"],
+                            "headline-lg-mobile": ["Jost", "sans-serif"],
+                            "headline-lg": ["Jost", "sans-serif"],
+                            "body-md": ["Jost", "sans-serif"]
+                        },
+                        "fontSize": {
+                            "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                            "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                            "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "300"}],
+                            "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                            "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "300"}]
+                        }
                     }
                 }
             }
-        }
+        } catch (_e) {}
     </script>
+<style>
+        /* Global typography override to match Engravers Gothic aesthetic */
+        body {
+            font-family: 'Jost', sans-serif;
+            text-rendering: optimizeLegibility;
+        }
+        .tracking-widest-logo {
+            letter-spacing: 0.4em;
+        }
+        h1, h2, h3, h4, .nav-link, button, .label {
+            text-transform: uppercase;
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(22, 19, 14, 0.95), rgba(22, 19, 14, 0.4));
+        }
+    </style>
 </head>
-<body class="bg-background text-on-background selection:bg-primary/30">
+<body class="bg-background text-on-background selection:bg-primary/30 font-body-md">
 <!-- Header / TopNavBar -->
-<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 bg-surface/80 backdrop-blur-xl transition-all duration-300">
 <div class="flex items-center gap-4">
-<img alt="Midnight City Orchestra" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiz84R6QdUVt5H3D5BUGo0J8Ol8rKh2RoF95ZkO-Fwi2hiFfEVnvEAUPGtyvuB2ibpLZbFNyyu-paEGgfYkUQYwDTFzJsc5IXdmAyAy8_xf0zomocDRmXYYJgAp5i-k-hbVtfvE9tOTrRs9gLyOI3KyXzAtN8boTIWihv-tp1IWgeiC3-3RVP6eVUL2US7Dp1SI628PNBKHX87QT6QnzzJsLPMgQS8fr5RMhRYX-59sd9Amo0w0GZt_XqFW7kuDwfkDE0">
-<span class="font-headline-md text-headline-md text-on-surface tracking-tighter hidden lg:block">Midnight City Orchestra</span>
+<img alt="Midnight City Orchestra" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiz84R6QdUVt5H3D5BUGo0J8Ol8rKh2RoF95ZkO-Fwi2hiFfEVnvEAUPGtyvuB2ibpLZbFNyyu-paEGgfYkUQYwDTFzJsc5IXdmAyAy8_xf0zomocDRmXYYJgAp5i-k-hbVtfvE9tOTrRs9gLyOI3KyXzAtN8boTIWihv-tp1IWgeiC3-3RVP6eVUL2US7Dp1SI628PNBKHX87QT6QnzzJsLPMgQS8fr5RMhRYX-59sd9Amo0w0GZt_XqFW7kuDwfkDE0"/>
+<span class="font-headline-md text-[20px] font-semibold text-on-surface tracking-widest-logo uppercase hidden lg:block">Midnight City Orchestra</span>
 </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="font-label-md text-label-md text-primary relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full" href="#">Home</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Il Concerto</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Chi Siamo</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">I Musicisti</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Diario</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contatti</a>
+<a class="nav-link font-label-md text-label-md text-primary tracking-[0.2em] uppercase relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full" href="#">Home</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-on-surface tracking-[0.2em] uppercase transition-colors" href="#">Il Concerto</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-on-surface tracking-[0.2em] uppercase transition-colors" href="#">Chi Siamo</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-on-surface tracking-[0.2em] uppercase transition-colors" href="#">I Musicisti</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-on-surface tracking-[0.2em] uppercase transition-colors" href="#">Diario</a>
+<a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-on-surface tracking-[0.2em] uppercase transition-colors" href="#">Contatti</a>
 </nav>
-<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:scale-105 active:scale-95 transition-all duration-300" href="#booking">
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md tracking-widest uppercase hover:scale-105 active:scale-95 transition-all duration-300" href="#booking">
             23 Luglio — MO.CA
         </a>
 </header>
@@ -137,19 +138,19 @@
 <!-- Hero Section -->
 <section class="relative h-screen w-full flex items-center justify-start overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A cinematic wide shot of a full orchestra performing on a dark stage illuminated by dramatic blue and gold spotlights. Wisps of atmospheric smoke catch the light, creating a moody, nocturnal atmosphere. The scene is elegant and high-prestige, echoing the Midnight City Orchestra brand aesthetic with deep shadows and vibrant light rays." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsV8_YgT1tdSakmoj9IE_pJwe6KlywmgNKiVu4lRKzsY_tIraISex_PsAooRVWywRH38WHP_zv_LChEFM7zbpBMiIOHFptCqhKIfdQrInIokq4DLLTZ5A_1F_NY6gTMAMf9HoT3dYh-6iYgkAV_zD7KaHJqq_-3Y_bt4npkcX9iCyI5qHDjbqnAOCef9GDdazsfJWQCka5jfHkyYi4dtHX2RxQJVG2XZYimdJR94bCdUpTO2y1JdQ_zw')"></div>
+<div class="w-full h-full bg-cover bg-center scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsV8_YgT1tdSakmoj9IE_pJwe6KlywmgNKiVu4lRKzsY_tIraISex_PsAooRVWywRH38WHP_zv_LChEFM7zbpBMiIOHFptCqhKIfdQrInIokq4DLLTZ5A_1F_NY6gTMAMf9HoT3dYh-6iYgkAV_zD7KaHJqq_-3Y_bt4npkcX9iCyI5qHDjbqnAOCef9GDdazsfJWQCka5jfHkyYi4dtHX2RxQJVG2XZYimdJR94bCdUpTO2y1JdQ_zw')"></div>
 <div class="absolute inset-0 hero-overlay"></div>
 </div>
 <div class="relative z-10 px-margin-desktop max-w-4xl">
-<h1 class="font-headline-xl text-headline-xl mb-6 animate-fade-in">Midnight City Orchestra<br><span class="text-primary italic">in concerto.</span></h1>
+<h1 class="font-headline-xl text-headline-xl mb-6 uppercase tracking-[0.1em]">Midnight City<br/><span class="text-primary font-light italic tracking-normal normal-case">in concerto.</span></h1>
 <p class="font-body-lg text-body-lg mb-10 text-on-surface-variant max-w-xl">
                     Orchestra ritmico-sinfonica. Colonne sonore, jazz e pop—con arrangiamenti originali che sfidano l'ordinario.
                 </p>
 <div class="flex flex-wrap gap-6">
-<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-md text-label-md hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-md text-label-md tracking-[0.25em] uppercase hover:shadow-lg hover:shadow-primary/20 transition-all duration-300">
                         Prenota il 23 luglio
                     </button>
-<button class="border-2 border-on-background/30 text-on-background px-10 py-4 rounded-full font-label-md text-label-md hover:bg-on-background/5 transition-all duration-300">
+<button class="border-2 border-on-background/30 text-on-background px-10 py-4 rounded-full font-label-md text-label-md tracking-[0.25em] uppercase hover:bg-on-background/5 transition-all duration-300">
                         Scopri l'orchestra
                     </button>
 </div>
@@ -160,41 +161,41 @@
 <div class="flex flex-col md:flex-row justify-between items-center gap-8">
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-primary">calendar_today</span>
-<span class="font-label-md text-label-md tracking-widest uppercase">23 LUGLIO 2026 · ORE 21:00</span>
+<span class="font-label-md text-label-md tracking-[0.3em] uppercase">23 LUGLIO 2026 · ORE 21:00</span>
 </div>
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-primary">location_on</span>
-<span class="font-label-md text-label-md tracking-widest uppercase">MO.CA — Brescia, Via Moretto 78</span>
+<span class="font-label-md text-label-md tracking-[0.3em] uppercase">MO.CA — Brescia, Via Moretto 78</span>
 </div>
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-primary">timer</span>
-<span class="font-label-md text-label-md tracking-widest uppercase text-primary">19 GIORNI AL DEBUTTO</span>
+<span class="font-label-md text-label-md tracking-[0.3em] uppercase text-primary">19 GIORNI AL DEBUTTO</span>
 </div>
 </div>
 </section>
 <!-- Tre mondi, un suono -->
 <section class="py-32 px-margin-desktop max-w-container-max mx-auto">
 <div class="mb-20 text-center">
-<h2 class="font-headline-lg text-headline-lg mb-4">Tre mondi, un suono</h2>
-<div class="w-20 h-1 bg-primary mx-auto"></div>
+<h2 class="font-headline-lg text-headline-lg mb-4 uppercase tracking-[0.15em]">Tre mondi, un suono</h2>
+<div class="w-20 h-0.5 bg-primary mx-auto"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <!-- Soundtrack -->
 <div class="p-10 bg-surface-container border-t-4 border-primary rounded-lg transition-transform hover:-translate-y-2 duration-300 group">
 <span class="material-symbols-outlined text-4xl mb-6 text-primary" style="font-variation-settings: 'FILL' 1;">movie</span>
-<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-primary transition-colors">Soundtracks</h3>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase tracking-widest group-hover:text-primary transition-colors">Soundtracks</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">L'emozione del grande cinema, reinterpretata con la forza di un ensemble orchestrale moderno.</p>
 </div>
 <!-- Jazz -->
 <div class="p-10 bg-surface-container border-t-4 border-primary rounded-lg transition-transform hover:-translate-y-2 duration-300 group">
 <span class="material-symbols-outlined text-4xl mb-6 text-primary" style="font-variation-settings: 'FILL' 1;">album</span>
-<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-primary transition-colors">Jazz</h3>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase tracking-widest group-hover:text-primary transition-colors">Jazz</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">L'improvvisazione e lo swing incontrano la precisione sinfonica in un dialogo continuo.</p>
 </div>
 <!-- Pop -->
 <div class="p-10 bg-surface-container border-t-4 border-primary rounded-lg transition-transform hover:-translate-y-2 duration-300 group">
 <span class="material-symbols-outlined text-4xl mb-6 text-primary" style="font-variation-settings: 'FILL' 1;">equalizer</span>
-<h3 class="font-headline-md text-headline-md mb-4 group-hover:text-primary transition-colors">Pop</h3>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase tracking-widest group-hover:text-primary transition-colors">Pop</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Successi contemporanei rivisitati attraverso una lente di prestigio e complessità ritmica.</p>
 </div>
 </div>
@@ -203,62 +204,34 @@
 <section class="py-32 bg-surface-container-lowest overflow-hidden">
 <div class="px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 <div class="relative group">
-<div class="aspect-[3/4] w-full bg-cover bg-center rounded-lg grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl" data-alt="A striking studio portrait of a handsome young musician in a leather jacket holding a trumpet. The lighting is low-key and dramatic, with soft highlights defining his features against a dark, textured gray background. The aesthetic is cool, modern, and soulful, perfectly capturing the Midnight City Orchestra's artistic personality." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBcp7pbIDRXrtUjjwwbiDthc13YBtbckDthtSRCtsfTvDWp61p2BTVACUMKMPjDWxxSLfOF0IdnKqOeKMo4eNDG0daUrHuqosz29GrXv4PaQePetZDO7qnTTJTBXASkDNyJYh3z0xn6sdTETKeliww8BT226P9gwxSS5UnK-awfVh55eiZLUXIVByKWb43YkRo8vhKKmABV7RwgCv729cXCAyaL6zfVaGhLlxVOTG__CmFp4v3J3JFM96BmA75hIwIxrR4&quot;);"></div>
+<div class="aspect-[3/4] w-full bg-cover bg-center rounded-lg grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBVofRGL3pSL2EMOnUJr2fwEHbWjvZtR0VIDc1ZS_r084ShI6h_h0p6efoMJevyRkd2iQOiogLamKssA0S_FgQJ2Pxv87nFPySdxNJpLo-MTtU91Dx4TfRA3vo4v-Ru_6IVQNllCz_uszhSEoNNjUIpynySf5f8gpvZsbBgbgQfyLT8sevqLg03kD81g6IjkEubLHvdZ-UxQdfenSYFV8FRTqXpR8ewgI-Ap6Wlpf9Z7VzoVvBLMV1vB2te3BckyudJAAg');"></div>
 <div class="absolute -bottom-6 -right-6 bg-primary p-8 rounded-lg text-on-primary">
-<p class="font-headline-md text-headline-md mb-1">Marco O.</p>
-<p class="font-label-md text-label-md uppercase tracking-wider opacity-80">Tromba solista</p>
+<p class="font-headline-md text-headline-md mb-1 uppercase tracking-widest">Marco O.</p>
+<p class="font-label-md text-label-md uppercase tracking-[0.3em] opacity-80">Tromba solista</p>
 </div>
 </div>
 <div>
-<h2 class="font-headline-lg text-headline-lg mb-12">I VOLTI DELLA<br><span class="text-primary italic">MIDNIGHT CITY</span></h2>
+<h2 class="font-headline-lg text-headline-lg mb-12 uppercase tracking-[0.1em]">I VOLTI DELLA<br/><span class="text-primary italic font-light lowercase tracking-normal">midnight city</span></h2>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-<!-- Generic Musician 1 -->
 <div class="text-center group">
-<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" data-alt="Close-up artistic portrait of a young female violinist with focused expression. High-contrast nocturnal lighting with golden rim-light reflecting off her instrument. Professional music industry photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAX90-LyHd2CFwEv-Lb1Dk9oRdqjx2DEmgIDTceQgxtqJ7k8fB_aRUX7VzMLWNfrqUvcsuhasRkaPO-LdcVZiKEWnfVIxbP2lBdn_7aikCUIk4erfksNYHtsXI8zQFzTwhwdnWHy9im-d8Azuyiw5EgtVA5RbcmA_8nfenRFwSC4UWBlhcpaCOhNu-mh8joYDFIZ6-cLKR1KFGeWaWD0fUwr0C1ufG-P6ygrpYZi87FesMagywWqMNf7A')"></div>
-<p class="font-label-md text-label-md text-on-surface">Mattia S.</p>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Eufonio</p>
+<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAX90-LyHd2CFwEv-Lb1Dk9oRdqjx2DEmgIDTceQgxtqJ7k8fB_aRUX7VzMLWNfrqUvcsuhasRkaPO-LdcVZiKEWnfVIxbP2lBdn_7aikCUIk4erfksNYHtsXI8zQFzTwhwdnWHy9im-d8Azuyiw5EgtVA5RbcmA_8nfenRFwSC4UWBlhcpaCOhNu-mh8joYDFIZ6-cLKR1KFGeWaWD0fUwr0C1ufG-P6ygrpYZi87FesMagywWqMNf7A')"></div>
+<p class="font-label-md text-label-md text-on-surface uppercase tracking-[0.25em]">Mattia S.</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-[0.3em] font-light">Eufonio</p>
 </div>
-<!-- Musician 2 -->
 <div class="text-center group">
-<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" data-alt="Portrait of a young male percussionist in a dark studio. Shadowy lighting with a cool blue tint. High-end aesthetic for a modern sinfonic orchestra member." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-CNwsnZGwhre4UnFc1DAhuCFJjPGK3-0TXS506irwLU3RbwzYC8DbIx1-67iMbKLJ-gQaXdpSpfKNxWRDPggRfZHvGXvTIs6PvrXEYxtnWsWVkqozJHpk802m987XQYZeT_f9gpoptM4pLHPNVCEW8KFR3BL2zv0XTLjdOonw7ybccovifsEVN1tU_Tg6MfgLr90omqDvwPFvZGyszHtFntxqMJiymOc0lpZ78Az85kFiTT4gSev84A')"></div>
-<p class="font-label-md text-label-md text-on-surface">Elena G.</p>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Violino</p>
+<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-CNwsnZGwhre4UnFc1DAhuCFJjPGK3-0TXS506irwLU3RbwzYC8DbIx1-67iMbKLJ-gQaXdpSpfKNxWRDPggRfZHvGXvTIs6PvrXEYxtnWsWVkqozJHpk802m987XQYZeT_f9gpoptM4pLHPNVCEW8KFR3BL2zv0XTLjdOonw7ybccovifsEVN1tU_Tg6MfgLr90omqDvwPFvZGyszHtFntxqMJiymOc0lpZ78Az85kFiTT4gSev84A')"></div>
+<p class="font-label-md text-label-md text-on-surface uppercase tracking-[0.25em]">Elena G.</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-[0.3em] font-light">Violino</p>
 </div>
-<!-- Musician 3 -->
 <div class="text-center group">
-<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" data-alt="Profile shot of a male cellist playing in a dimly lit concert hall. Cinematic stage lighting with subtle lens flares and smoke in the background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZdExPzzsfYq76VhXmF2b7xS9HljNPqAmmp8i0bizuYwTAZfh66eJ-P33sgAd-dQZnd0ANzleaXIfKvdzTqxCRpDh4XkUP1V1d7FwoCh-qTsXwYNsks65qaDYCB8H9X41TASss7_YzqXla6pqqPj9i87rahnTVRW8vjhVlv0eGBCj6PNW_KzXNbuPopyqO_wbbXHgas5FUgUzDf3WEScUnpWPj2dN2v_IA4v0YkBxhGAqeYKCS6jXI9A')"></div>
-<p class="font-label-md text-label-md text-on-surface">Luca R.</p>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Clarinetto</p>
+<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAZdExPzzsfYq76VhXmF2b7xS9HljNPqAmmp8i0bizuYwTAZfh66eJ-P33sgAd-dQZnd0ANzleaXIfKvdzTqxCRpDh4XkUP1V1d7FwoCh-qTsXwYNsks65qaDYCB8H9X41TASss7_YzqXla6pqqPj9i87rahnTVRW8vjhVlv0eGBCj6PNW_KzXNbuPopyqO_wbbXHgas5FUgUzDf3WEScUnpWPj2dN2v_IA4v0YkBxhGAqeYKCS6jXI9A')"></div>
+<p class="font-label-md text-label-md text-on-surface uppercase tracking-[0.25em]">Luca R.</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-[0.3em] font-light">Clarinetto</p>
 </div>
-<!-- Musician 4 -->
 <div class="text-center group">
-<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" data-alt="Portrait of a young female flutist in an elegant black dress. Moody nocturnal aesthetic with sophisticated lighting focus on her face." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfY9bqXoHgTzqtajHpCZ7rK4YKjXEKeiPwg7lgMlGseMxBJPDs0vBNAvigEY_lymQEQ8SmMNxcaXn-wxMCQOrxS7XXAs9mwfMx3NlePgf1DQiznH4PI8ZRzONk9IPbIrUPf-eGG4FAVBLuSlYjJc9ekRv_ePzeVeS60riQ8LXue1HObhsBSuszxr10LaBfRDZufJlJtfg7U9nQXvv3oHk_Y88wkVDSEKCdKqiocvOIjUiqC1IDJ3KKsw')"></div>
-<p class="font-label-md text-label-md text-on-surface">Sara B.</p>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Arpa</p>
-</div>
-<!-- Musician 5 -->
-<div class="text-center group">
-<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" data-alt="Expressive portrait of a jazz saxophonist in a nocturnal brescia alleyway. Neon light reflections, cinematic grain, professional musical ensemble photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwcNZQu3ywEpWnFxM7LYqF9q9e-3xk51-poUdzOk9PesNIHHdoQgqz5gRYGnyM9Hdh39n9kN-JRVSNMCqWac2QZLUxz81clj6Yw2Ti5aH_5sRYpM9Om4H9_F6wI66jqK8OdEz4bL7kULM4LQuG8wTUqTSbhyJGfTf0sx9n4TUOz7QS6xOG4sLYZN6N0Tq3vPYqosHoBhzUaV8eKoI7683JJUEM_ZeV3dNN_yrTNatjYRoiahsO-qf_0w')"></div>
-<p class="font-label-md text-label-md text-on-surface">Paolo F.</p>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Contrabbasso</p>
-</div>
-<!-- Musician 6 -->
-<div class="text-center group">
-<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" data-alt="Studio portrait of a focused young female pianist. Soft dark lighting with elegant silver and gold accents in the atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDA-QvDQyFPZGtX3cfIL56nbPH0q3mx4KduM1RxR1QgZrMS7JaGtygMZgo18AbwLsKF4DXSlQQyfuXHK_vMHr0p7SlqdP30wUxQTriG9Xn5_7kyYq4hMy68hi35VGgAdmC5GHqDjqFEd7gVPYsQV4jrHmgX6VkivpxYQN76f3cD749aTG4xWY_IbEJyQqW34VYr2wwah_ZNVc90Ig4qsMhwZWv7Nlm0hioXtFDwLSSH5QwVqceXGeUypQ')"></div>
-<p class="font-label-md text-label-md text-on-surface">Giulia V.</p>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Piano</p>
-</div>
-<!-- Musician 7 -->
-<div class="text-center group">
-<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" data-alt="Dynamic shot of a young trombonist in mid-performance. Cinematic shadows and dramatic stage lighting typical of a high-end jazz performance." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEav6nIuJPxUxllO667h5Ro39_jdrPNsrrvpeLDOUeBQx5u5hBmDTGiId_BcDmQOx6otS7JsWUmDqE17emS2u7sK0OmoE2519yKhg3fa6dLKCBcMmM8I_2skYlVKAHVB-E3RSe49j8M1l27IC0zBNBoNS_RBEhDa_Kp4SX5J8eORw9XIgXv1F0MruF1i7FQliC3u37TT4G4u9MSPEMQ6sRy8t6aon4L-SQatzUovXnsMpw9rL78On73Q')"></div>
-<p class="font-label-md text-label-md text-on-surface">Davide M.</p>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Trombone</p>
-</div>
-<!-- Musician 8 -->
-<div class="text-center group">
-<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" data-alt="Portrait of a young female vocalist in a classic performance stance. Dark blue background with sophisticated golden spotlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxzKDfRPaTqP25kEZagxDGDOQkFOy_AMEQUU6x-SJLiTd0tEjBmPbuhCvD0suWtqqOaYh6HDQzBVQdv2Z1cW88VFk0rp7JxK7af1aaH0BpNTwYCYEN1gITrWGvAzDaWqVqOh3X805UwngqYEgKwU2erWq1eD-FE7tiY_Hd5IiRoWvPNpJc6aTyA4pegisTbVtnlQ_BOpyB-UkEuKMDgXXv-WAytebizCliEM2gT3Oja2NSUmXOR9qaVw')"></div>
-<p class="font-label-md text-label-md text-on-surface">Anna T.</p>
-<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Oboe</p>
+<div class="w-24 h-24 rounded-full bg-cover bg-center mx-auto mb-4 border-2 border-transparent group-hover:border-primary transition-all duration-300" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfY9bqXoHgTzqtajHpCZ7rK4YKjXEKeiPwg7lgMlGseMxBJPDs0vBNAvigEY_lymQEQ8SmMNxcaXn-wxMCQOrxS7XXAs9mwfMx3NlePgf1DQiznH4PI8ZRzONk9IPbIrUPf-eGG4FAVBLuSlYjJc9ekRv_ePzeVeS60riQ8LXue1HObhsBSuszxr10LaBfRDZufJlJtfg7U9nQXvv3oHk_Y88wkVDSEKCdKqiocvOIjUiqC1IDJ3KKsw')"></div>
+<p class="font-label-md text-label-md text-on-surface uppercase tracking-[0.25em]">Sara B.</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-[0.3em] font-light">Arpa</p>
 </div>
 </div>
 </div>
@@ -268,18 +241,18 @@
 <section class="py-32 px-margin-desktop">
 <div class="flex flex-col lg:flex-row gap-20 items-center">
 <div class="lg:w-1/2">
-<h2 class="font-headline-lg text-headline-lg mb-8">Da una notte di Natale a Brescia</h2>
+<h2 class="font-headline-lg text-headline-lg mb-8 uppercase tracking-[0.1em]">Da una notte di Natale a Brescia</h2>
 <div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
 <p class="">Nata sotto le luci invernali del centro storico di Brescia, la Midnight City Orchestra è il risultato di un sogno condiviso tra musicisti che cercavano un linguaggio nuovo. Quello che era iniziato come un esperimento natalizio tra amici è diventato un ensemble stabile di professionisti uniti dalla voglia di esplorare i confini tra generi.</p>
 <p class="">La nostra missione è portare la musica "colta" nelle piazze e i grandi successi popolari nei teatri, vestendoli di nuovi abiti sinfonici carichi di pathos e ritmo contemporaneo.</p>
-<button class="text-primary font-label-md text-label-md flex items-center gap-2 mt-8 group">
+<button class="text-primary font-label-md text-label-md uppercase tracking-[0.3em] flex items-center gap-2 mt-8 group">
                             Scopri la nostra storia 
                             <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
 </button>
 </div>
 </div>
 <div class="lg:w-1/2 relative">
-<div class="aspect-video w-full bg-cover bg-center rounded-lg shadow-2xl grayscale-50" data-alt="An atmospheric night view of Brescia, Italy, featuring the historic dome of the Duomo and old cobblestone streets under moonlit skies. The city is peaceful yet alive with a subtle nocturnal energy. Warm streetlights contrast with the cool blue midnight shadows. Cinematic photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmukqHRvVb9WdXMchGZOwh_k_6yCpEVUCEYN7eO7opypF-s1L2xKM-eqkZ3Cvt1787xgzm55ZgU6CTboQ34tuAOrH5R5CoWpX6w4FrzlvEFq_1owECOdFhLz909Ok3tFDpIAgCY9To2Dlh1n9kgX2W3Ikc1XTGPZC4_QtVregqTWovOMD9aInbaEnJXJTN48UScQRJDEp8wr4-GbDQwBsxYV_nXhK5wJuLQY-2ZJ16F0jOIHIoevtm0Q')"></div>
+<div class="aspect-video w-full bg-cover bg-center rounded-lg shadow-2xl grayscale-50" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBmukqHRvVb9WdXMchGZOwh_k_6yCpEVUCEYN7eO7opypF-s1L2xKM-eqkZ3Cvt1787xgzm55ZgU6CTboQ34tuAOrH5R5CoWpX6w4FrzlvEFq_1owECOdFhLz909Ok3tFDpIAgCY9To2Dlh1n9kgX2W3Ikc1XTGPZC4_QtVregqTWovOMD9aInbaEnJXJTN48UScQRJDEp8wr4-GbDQwBsxYV_nXhK5wJuLQY-2ZJ16F0jOIHIoevtm0Q')"></div>
 <div class="absolute -top-10 -left-10 w-40 h-40 border-l border-t border-primary/30"></div>
 <div class="absolute -bottom-10 -right-10 w-40 h-40 border-r border-b border-primary/30"></div>
 </div>
@@ -290,38 +263,37 @@
 <div class="px-margin-desktop">
 <div class="flex justify-between items-end mb-16">
 <div>
-<p class="text-primary font-label-md text-label-md uppercase tracking-widest mb-2">Backstage</p>
-<h2 class="font-headline-lg text-headline-lg">Diario di bordo</h2>
+<p class="text-primary font-label-md text-label-md uppercase tracking-[0.4em] mb-2">Backstage</p>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-[0.1em]">Diario di bordo</h2>
 </div>
-<a class="font-label-md text-label-md hover:text-primary transition-colors" href="#">Vedi tutto</a>
+<a class="font-label-md text-label-md uppercase tracking-[0.25em] hover:text-primary transition-colors" href="#">Vedi tutto</a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <div class="group cursor-pointer">
 <div class="overflow-hidden rounded-lg mb-6">
-<div class="aspect-video w-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="A focused close-up of sheet music for Midnight City Orchestra, showing complex original arrangements. The paper is slightly aged, resting on a dark wood music stand under a warm reading light. Professional, high-contrast musical photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDi-T-izbLQlomfve0-ATimQcMjGo0yFYs5UN4AIWUxunv90xmMi-Xh2TAPX-3pengMIyBcGhTEBZONxf7vn4vWZQIx6whpWJoV4xybW3d2MNIhZ9G4xLFxCFqkANS74DM88BTbuiXZtT-fTh-9uhbkBtdwsWl_vS1htIH_ykcUFnUpBRla2cXdxESExWWGTIh8gDbjbJztdg9Xx9u9rk4Ww95DbqUjbe17C_acBEuM8ZdwVGsamd57qg')"></div>
+<div class="aspect-video w-full bg-cover bg-center group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDi-T-izbLQlomfve0-ATimQcMjGo0yFYs5UN4AIWUxunv90xmMi-Xh2TAPX-3pengMIyBcGhTEBZONxf7vn4vWZQIx6whpWJoV4xybW3d2MNIhZ9G4xLFxCFqkANS74DM88BTbuiXZtT-fTh-9uhbkBtdwsWl_vS1htIH_ykcUFnUpBRla2cXdxESExWWGTIh8gDbjbJztdg9Xx9u9rk4Ww95DbqUjbe17C_acBEuM8ZdwVGsamd57qg')"></div>
 </div>
-<p class="text-on-surface-variant font-label-md text-label-md mb-2">12 Giugno 2026</p>
-<h3 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Verso il debutto al MO.CA</h3>
+<p class="text-on-surface-variant font-label-md text-label-md uppercase tracking-[0.3em] mb-2">12 Giugno 2026</p>
+<h3 class="font-headline-md text-headline-md uppercase tracking-wider group-hover:text-primary transition-colors">Verso il debutto al MO.CA</h3>
 <p class="mt-4 font-body-md text-body-md text-on-surface-variant line-clamp-2">Iniziano le prove finali per il debutto di Luglio. Atmosfera elettrica e nuovi arrangiamenti che prendono vita...</p>
 </div>
-<!-- Other posts could go here -->
 </div>
 </div>
 </section>
 <!-- Newsletter / Social -->
 <section class="py-32 bg-[#14141C] text-center px-margin-mobile">
-<h2 class="font-headline-lg text-headline-lg mb-6">Resta nella Midnight City</h2>
+<h2 class="font-headline-lg text-headline-lg mb-6 uppercase tracking-[0.15em]">Resta nella Midnight City</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Ricevi aggiornamenti sui prossimi concerti e contenuti esclusivi dal dietro le quinte.</p>
 <div class="max-w-md mx-auto flex gap-4 mb-16">
-<input class="flex-grow bg-surface-container border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary text-on-surface" placeholder="La tua email" type="email">
-<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:scale-105 transition-transform">Invia</button>
+<input class="flex-grow bg-surface-container border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary text-on-surface font-body-md" placeholder="La tua email" type="email"/>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md uppercase tracking-[0.3em] hover:scale-105 transition-transform">Invia</button>
 </div>
 <div class="flex justify-center gap-10">
 <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
-<span class="font-label-md text-label-md">INSTAGRAM / @midnightcityorchestra</span>
+<span class="font-label-md text-label-md uppercase tracking-[0.3em]">INSTAGRAM / @midnightcityorchestra</span>
 </a>
 <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
-<span class="font-label-md text-label-md">FACEBOOK</span>
+<span class="font-label-md text-label-md uppercase tracking-[0.3em]">FACEBOOK</span>
 </a>
 </div>
 </section>
@@ -330,52 +302,51 @@
 <footer class="w-full px-margin-desktop py-20 bg-surface-container-lowest border-t border-outline-variant flex flex-col gap-12">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
 <div class="col-span-1 md:col-span-2">
-<img alt="MCO Logo" class="h-16 w-auto mb-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7necYaBOouJkz0SFEmqhQ8J6Kv0MokOoIbuOodFo8RBp7mjDJok7iouSvdVl2rdIc42k8yXFSDVMHJFjB6wPi77yLkT-jgSms8QrCeumooo_sniWCtcw4Sw_qO6w_7u05TW5xwabnOF9B_MS2jc_cQtijfyelXq2vvBAKYSM2x7ti6kZtwHWTkjZwuwYqfnO3Sb80flssTY4TRkY5o2ytMmhrUJnSdmwxwcri3SWwogi_iwKlC2nH8S8G43-lGSdluUA">
+<img alt="MCO Logo" class="h-16 w-auto mb-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7necYaBOouJkz0SFEmqhQ8J6Kv0MokOoIbuOodFo8RBp7mjDJok7iouSvdVl2rdIc42k8yXFSDVMHJFjB6wPi77yLkT-jgSms8QrCeumooo_sniWCtcw4Sw_qO6w_7u05TW5xwabnOF9B_MS2jc_cQtijfyelXq2vvBAKYSM2x7ti6kZtwHWTkjZwuwYqfnO3Sb80flssTY4TRkY5o2ytMmhrUJnSdmwxwcri3SWwogi_iwKlC2nH8S8G43-lGSdluUA"/>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
                     Midnight City Orchestra è un'orchestra ritmico-sinfonica dedicata alla riscoperta dei grandi classici attraverso lenti sonore contemporanee.
                 </p>
 </div>
 <div>
-<h4 class="font-label-md text-label-md text-primary uppercase mb-6 tracking-widest">Navigazione</h4>
+<h4 class="font-label-md text-label-md text-primary uppercase mb-6 tracking-[0.3em]">Navigazione</h4>
 <nav class="flex flex-col gap-4">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Il Concerto</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">I Musicisti</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contatti</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.1em]" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.1em]" href="#">Il Concerto</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.1em]" href="#">I Musicisti</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.1em]" href="#">Contatti</a>
 </nav>
 </div>
 <div>
-<h4 class="font-label-md text-label-md text-primary uppercase mb-6 tracking-widest">Contatti</h4>
+<h4 class="font-label-md text-label-md text-primary uppercase mb-6 tracking-[0.3em]">Contatti</h4>
 <div class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant">
-<p class="">Brescia, Italia</p>
-<p class="">info@midnightcityorchestra.it</p>
+<p class="uppercase tracking-[0.1em]">Brescia, Italia</p>
+<p class="tracking-[0.1em]">info@midnightcityorchestra.it</p>
 <div class="pt-4 mt-4 border-t border-outline-variant">
-<p class="text-[12px] uppercase tracking-tighter opacity-60">In collaborazione con</p>
-<p class="font-bold">Bazzini Consort</p>
+<p class="text-[12px] uppercase tracking-[0.3em] opacity-60">In collaborazione con</p>
+<p class="font-bold uppercase tracking-[0.2em]">Bazzini Consort</p>
 </div>
 </div>
 </div>
 </div>
 <div class="pt-12 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6">
-<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Midnight City Orchestra. All rights reserved.</p>
+<p class="font-body-md text-body-md text-on-surface-variant uppercase tracking-[0.1em]">© 2024 Midnight City Orchestra. All rights reserved.</p>
 <div class="flex gap-8">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Policy</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.1em]" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.1em]" href="#">Cookie Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.1em]" href="#">Terms of Service</a>
 </div>
 </div>
 </footer>
 <script>
-        // Simple scroll effect for header
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
-                header.classList.add('shadow-xl', 'bg-surface/95');
+                header.classList.add('shadow-xl', 'bg-surface/95', 'py-3');
+                header.classList.remove('py-4');
             } else {
-                header.classList.remove('shadow-xl', 'bg-surface/95');
+                header.classList.remove('shadow-xl', 'bg-surface/95', 'py-3');
+                header.classList.add('py-4');
             }
         });
     </script>
-
-
 </body></html>
